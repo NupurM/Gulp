@@ -39,6 +39,16 @@ echo.>index.html
   - Install Node -> npm -> bower
   - Check versions with -v
   - Inside app folder -> bower init -> default options
-  - This creates a bower.json file
+    - Creates bower.json
   - bower install jquery angular backbone --save
   - bower list --paths -> shows the path to use in the index.html file
+
+### Step 4 - Gulp
+  - npm init 
+    - Creates package.json
+  - npm install -g gulp
+  - npm install gulp --save-dev
+    - Creates package-lock.json
+  - echo.>gulpfile.js in the root app folder  
+ ![Folders And Files](app/image/Folders and Files.png)
+
