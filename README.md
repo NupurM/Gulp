@@ -33,3 +33,12 @@ cd \Gulp
 mkdir app
 cd app
 echo.>index.html
+
+### Step 3 - Bower (Obsolete)
+  - Does not work with corporate firewall. Connect to optimumwifi
+  - Install Node -> npm -> bower
+  - Check versions with -v
+  - Inside app folder -> bower init -> default options
+  - This creates a bower.json file
+  - bower install jquery angular backbone --save
+  - bower list --paths -> shows the path to use in the index.html file
