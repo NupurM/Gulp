@@ -1,15 +1,34 @@
 {
   "name": "app",
   "version": "1.0.0",
-  "description": "",
+  "description": "A project to try out Gulp Task Runner",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "bootstrap": "^4.1.1",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-tinifier": "^1.0.2",
+    "gulp-uglify": "^3.0.0",
+    "jquery": "^3.3.1",
+    "popper": "^1.0.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "NM",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NupurM/Gulp.git"
+  },
+  "keywords": [
+    "Gulp"
+  ],
+  "bugs": {
+    "url": "https://github.com/NupurM/Gulp/issues"
+  },
+  "homepage": "https://github.com/NupurM/Gulp#readme"
 }

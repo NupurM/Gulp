@@ -52,3 +52,7 @@ echo.>index.html
   - echo.>gulpfile.js in the root app folder  
  ![Folders And Files](app/image/Folders and Files.png)
 
+###Tutorials
+Introduction to Gulp JavaScript Task Runner - Step by Step Tutorial
+Richard Barkinskiy
+https://www.youtube.com/watch?v=1NzZg77VqdY

@@ -1,0 +1,11 @@
+$primary-color:#333;
+$secondary-color:pink;
+$font-size:12px;
+body {
+    background-color: $primary-color;
+    color: $secondary-color;
+}
+
+.new-style {
+    font-size: $font-size;
+}
