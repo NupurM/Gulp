@@ -1,17 +1,19 @@
-var gulp = require('gulp'),
-    sass = require('gulp-sass'),
-    concat = require('gulp-concat'),
-    clean_css = require('gulp-clean-css'),
-    png_tinifier = require('gulp-tinifier'),
-    uglify = require('gulp-uglify');
+var gulp = require('gulp'), //task runner
+    concat = require('gulp-concat'), //concatinate all file types
+    clean_css = require('gulp-clean-css'), //minify css
+    plumber = require('gulp-plumber'), //Prevent errors from breaking the watch
+    sass = require('gulp-sass'), //compile sass to css
+    png_tinifier = require('gulp-tinifier'), //compress png
+    uglify = require('gulp-uglify'); //minify js
 
 gulp.task('sass', function () {
     return gulp.src('scss/*.scss')
+        .pipe(plumber())
         .pipe(sass())
         .pipe(gulp.dest('css'));
 });
 
-gulp.task('css', function () {
+gulp.task('css', ['sass'], function () {
     return gulp.src('css/*.css')
         .pipe(concat('styles.css'))
         .pipe(clean_css())
@@ -39,4 +41,4 @@ gulp.task('watch', function () {
     gulp.watch(['scss/*.scss', 'css/*.css'], ['sass', 'css']);
 });
 
-gulp.task('run-all', ['sass', 'css', 'jquery-scripts', 'compress-png']);
+gulp.task('run-all', ['css', 'jquery-scripts', 'compress-png']);
