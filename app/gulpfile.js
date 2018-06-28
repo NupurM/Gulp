@@ -6,6 +6,10 @@ var gulp = require('gulp'), //task runner
     png_tinifier = require('gulp-tinifier'), //compress png
     uglify = require('gulp-uglify'); //minify js
 
+//////////////////
+//  CSS
+//////////////////
+
 gulp.task('sass', function () {
     return gulp.src('scss/*.scss')
         .pipe(plumber())
@@ -20,12 +24,20 @@ gulp.task('css', ['sass'], function () {
         .pipe(gulp.dest('dist'));
 });
 
+//////////////////
+//  JavaScripts
+//////////////////
+
 gulp.task('jquery-scripts', function () {
     return gulp.src('node_modules/jquery/src/*.js')
         .pipe(concat('jquery.js'))
         .pipe(uglify('jquery.min.js'))
         .pipe(gulp.dest('dist'));
 });
+
+//////////////////
+//  Images
+//////////////////
 
 gulp.task('compress-png', function () {
     var tinifierOptions = {
@@ -37,8 +49,16 @@ gulp.task('compress-png', function () {
         .pipe(gulp.dest('dist/images'));
 });
 
+//////////////////
+//  Watch Task - Monitors file changes and runs tasks
+//////////////////
+
 gulp.task('watch', function () {
     gulp.watch(['scss/*.scss', 'css/*.css'], ['sass', 'css']);
 });
 
-gulp.task('run-all', ['css', 'jquery-scripts', 'compress-png']);
+//////////////////
+//  Default Task - Just type gulp to run
+//////////////////
+
+gulp.task('default', ['css', 'jquery-scripts', 'compress-png']);
