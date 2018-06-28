@@ -26,12 +26,12 @@ gulp.task('jquery-scripts', function () {
 });
 
 gulp.task('compress-png', function () {
-    var tinifier_options = {
+    var tinifierOptions = {
         key: 'cgNFda0kjG8mLKr85GTs88oUCS0Om8w6',
         verbose: 'true'
     }
     return gulp.src('image/*.png')
-        .pipe(png_tinifier(tinifier_options))
+        .pipe(png_tinifier(tinifierOptions))
         .pipe(gulp.dest('dist/images'));
 });
 
